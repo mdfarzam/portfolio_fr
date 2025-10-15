@@ -1,39 +1,133 @@
 import React from "react";
 
 const About = () => {
+  const stats = [
+    { value: "18+", label: "Years Experience" },
+    { value: "200+", label: "Projects Delivered" },
+    { value: "50+", label: "Global Clients" },
+    { value: "15+", label: "Team Members" }
+  ];
+
+  const values = [
+    {
+      icon: "🎯",
+      title: "Mission-Driven",
+      desc: "We're passionate about creating digital solutions that make a real impact"
+    },
+    {
+      icon: "⚡",
+      title: "Fast & Agile",
+      desc: "Quick turnarounds without compromising on quality or attention to detail"
+    },
+    {
+      icon: "🤝",
+      title: "Partnership",
+      desc: "Your success is our success. We work as an extension of your team"
+    }
+  ];
+
+  const expertise = [
+    "Web Development",
+    "Mobile Apps",
+    "SaaS Platforms",
+    "E-commerce",
+    "Brand Identity",
+    "Growth Marketing",
+    "UI/UX Design",
+    "Cloud Solutions"
+  ];
+
   return (
-    <div className="bg-gray-50">
-    <div className=" flex flex-col md:flex-row items-center justify-between min-h-[60vh] mx-22 rounded-2xl bg-neutral-950 text-white px-10 py-16 gap-10">
-      {/* Left Image */}
-      <div className="flex justify-center md:w-1/2">
-        <img
-          src="/team.png"
-          alt="Team"
-          className="rounded-2xl w-full max-w-md object-cover"
-        />
+    <div className="bg-gray-50 py-20">
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row items-center justify-between min-h-[60vh] mx-1 rounded-3xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 text-white px-12 py-16 gap-12 shadow-2xl relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl"></div>
+        </div>
+
+        {/* Left Image */}
+        <div className="relative flex justify-center md:w-1/2 z-10">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+              alt="Team"
+              className="relative rounded-2xl w-full max-w-md object-cover shadow-2xl"
+            />
+            {/* Floating badge */}
+            <div className="absolute -bottom-4 -right-4 bg-white text-black px-6 py-3 rounded-2xl shadow-xl">
+              <div className="text-2xl font-bold">18+</div>
+              <div className="text-xs text-gray-600 uppercase tracking-wide">Years</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side */}
+        <div className="relative flex flex-col justify-center md:w-1/2 space-y-6 z-10">
+          <span className="text-gray-400 text-sm tracking-widest uppercase font-semibold flex items-center gap-2">
+            ✦ Meet the Team
+          </span>
+          <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+            FreelanceStudio
+          </h1>
+          <p className="text-2xl text-gray-300 font-semibold">
+            Expert Web Dev Agency
+          </p>
+          <p className="text-gray-400 leading-relaxed text-base max-w-lg">
+            Over 18 years building digital products for multinationals and
+            startups. From MVPs to SaaS platforms, rebranding to growth
+            marketing—helping businesses succeed digitally.
+          </p>
+
+          {/* Stats mini grid */}
+          <div className="grid grid-cols-2 gap-4 pt-4">
+            {stats.slice(0, 2).map((stat, idx) => (
+              <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
+                <div className="text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-xs text-gray-400 uppercase tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Button */}
+          <button className="bg-white text-black text-base font-semibold px-8 py-4 rounded-full w-fit mt-4 hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:scale-105">
+            Let's Connect →
+          </button>
+        </div>
+      </div>
+      
+
+      {/* Team Culture Section */}
+      <div className="max-w-7xl mx-auto px-8 py-16">
+        <div className="bg-transparent rounded-3xl p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+          
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Remote-First, Globally Connected</h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Our distributed team brings together the best talent from around the world. 
+              We believe great work happens when people have the freedom to work from anywhere, 
+              at their peak productivity hours.
+            </p>
+            <div className="flex gap-6 justify-center flex-wrap">
+              <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-lg">
+                <span className="text-sm font-semibold text-gray-900">🌍 10+ Countries</span>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-lg">
+                <span className="text-sm font-semibold text-gray-900">⏰ 24/7 Coverage</span>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-lg">
+                <span className="text-sm font-semibold text-gray-900">🚀 Agile Workflow</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Right Side */}
-      <div className="flex flex-col justify-center md:w-1/2 space-y-4">
-        <span className="text-gray-400 text-sm tracking-wide uppercase">
-        ✦ Meet the Team
-        </span>
-        <h1 className="text-5xl font-bold">FreelanceStudio</h1>
-        <p className="text-lg text-gray-300 font-medium">
-          Expert Web Dev Agency
-        </p>
-        <p className="text-gray-400 leading-relaxed text-sm max-w-md">
-          Over 18 years building digital products for multinationals and
-          startups. From MVPs to SaaS platforms, rebranding to growth
-          marketing—helping businesses succeed digitally.
-        </p>
 
-        {/* White connect button */}
-        <button className="bg-white text-black text-sm px-5 py-2 rounded-full w-fit mt-4 hover:bg-gray-200 transition">
-          Connect
-        </button>
-      </div>
-    </div>
     </div>
   );
 };
