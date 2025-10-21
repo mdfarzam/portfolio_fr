@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   const stats = [
-    { value: "18+", label: "Years Experience" },
-    { value: "200+", label: "Projects Delivered" },
+    { value: "Fresh Ideas", label: "Creative Thinking" },
+    { value: "Big Ambitions", label: "Growth Mindset" },
     { value: "50+", label: "Global Clients" },
     { value: "15+", label: "Team Members" }
   ];
@@ -57,10 +57,7 @@ const About = () => {
               className="relative rounded-2xl w-full max-w-md object-cover shadow-2xl"
             />
             {/* Floating badge */}
-            <div className="absolute -bottom-4 -right-4 bg-white text-black px-6 py-3 rounded-2xl shadow-xl">
-              <div className="text-2xl font-bold">18+</div>
-              <div className="text-xs text-gray-600 uppercase tracking-wide">Years</div>
-            </div>
+            
           </div>
         </div>
 
@@ -70,23 +67,21 @@ const About = () => {
             ✦ Meet the Team
           </span>
           <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-            FreelanceStudio
+             pixel perfect solutions
           </h1>
           <p className="text-2xl text-gray-300 font-semibold">
             Expert Web Dev Agency
           </p>
           <p className="text-gray-400 leading-relaxed text-base max-w-lg">
-            Over 18 years building digital products for multinationals and
-            startups. From MVPs to SaaS platforms, rebranding to growth
-            marketing—helping businesses succeed digitally.
+            We create impactful digital solutions for businesses, from websites and apps to branding and growth strategies. Helping startups and small businesses succeed online.
           </p>
 
           {/* Stats mini grid */}
           <div className="grid grid-cols-2 gap-4 pt-4">
             {stats.slice(0, 2).map((stat, idx) => (
               <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
-                <div className="text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-xs text-gray-400 uppercase tracking-wide">{stat.label}</div>
+                <div className="text-3xl font-bold text-white">{stats.value}</div>
+                {stat.label && <div className="text-sm text-white/70">{stat.label}</div>}
               </div>
             ))}
           </div>
@@ -114,7 +109,7 @@ const About = () => {
             </p>
             <div className="flex gap-6 justify-center flex-wrap">
               <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-lg">
-                <span className="text-sm font-semibold text-gray-900">🌍 10+ Countries</span>
+                <span className="text-sm font-semibold text-gray-900">🌍worldwide </span>
               </div>
               <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-200 shadow-lg">
                 <span className="text-sm font-semibold text-gray-900">⏰ 24/7 Coverage</span>
