@@ -18,9 +18,10 @@ const Hero = () => {
         {/* Left Section */}
         <div className="flex flex-col gap-4 max-w-3xl">
           {/* Badge */}
-          <div className="inline-block backdrop-blur-sm bg-white/10 px-4 py-2 rounded-full border border-white/20 text-white text-xs font-semibold shadow-lg w-max">
-            🏆 Award Winner 2025
+          <div className="inline-block backdrop-blur-sm bg-white/10 px-8 py-3 rounded-full border border-white/20 text-white text-lg font-semibold shadow-lg w-max tracking-wide">
+           Pixel Perfect Solutions
           </div>
+
 
           <p className="text-sm uppercase font-bold tracking-widest text-white/70 drop-shadow-sm">
             Design · Develop · Deliver
@@ -129,18 +130,26 @@ const Hero = () => {
       </div>
 
       {/* Bottom Center Stats */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-16 flex-wrap justify-center items-center z-10">
-        {[
-          { value: "500+", label: "Projects Delivered" },
-          { value: "98%", label: "Client Satisfaction" },
-          { value: "50+", label: "Team Members" },
-        ].map((stat, i) => (
-          <div key={i} className="text-center group cursor-pointer">
-            <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-white/95 to-blue-300/95 text-3xl font-bold drop-shadow-sm group-hover:scale-110 transition-transform">{stat.value}</div>
-            <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-white/95 to-blue-300/95 text-sm uppercase tracking-wide drop-shadow-sm">{stat.label}</div>
-          </div>
-        ))}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col gap-6 items-center z-10">
+  <h2 className="text-white text-2xl font-bold mb-4">What We Do</h2>
+  <div className="flex gap-10 flex-wrap justify-center items-center">
+    {[
+      { label: "Web Development", icon: "💻" },
+      { label: "UI/UX Design", icon: "🎨" },
+      { label: "Brand Identity", icon: "⭐" },
+    ].map((service, i) => (
+      <div key={i} className="text-center flex flex-col items-center gap-2">
+        <div className="text-3xl">{service.icon}</div>
+        <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-white/95 to-blue-300/95 text-xl font-semibold drop-shadow-sm">
+          {service.label}
+        </div>
       </div>
+    ))}
+  </div>
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-40 bg-gradient-to-t from-white/5 to-transparent rounded-full -z-0"></div>
+</div>
+
+
     </div>
   );
 };

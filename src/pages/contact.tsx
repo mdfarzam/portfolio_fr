@@ -12,14 +12,14 @@ const Contact: React.FC = () => {
     {
       icon: "📧",
       label: "Email",
-      value: "hello@freelancestudio.com",
-      link: "mailto:hello@freelancestudio.com"
+      value: "pixelperfectsolutions979@gmail.com",
+      link: "mailto:pixelperfectsolutions979@gmail.com"
     },
     {
       icon: "📱",
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 9868666610",
+      link: "tel:9868666610"
     },
     {
       icon: "🌍",
